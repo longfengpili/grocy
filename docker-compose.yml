@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  cron:
+    build: 
+      context: ./docker
+      dockerfile: Dockerfile
+    container_name: cron
+    restart: always
+    privileged: true #root权限
+    command: 
+      - /bin/bash
+      - -c
+      - |
+        cron
+        crontab /etc/cron.d/crontab
+        tail -f /dev/null
+    volumes:
+      - .:/workspace/
+      - ./docker/crontab:/etc/cron.d/crontab
+
+  
