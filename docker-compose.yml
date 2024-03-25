@@ -1,6 +1,18 @@
 version: '3'
 
 services:
+  grocy:
+    container_name: grocy
+    restart: always
+    image: linuxserver/grocy:version-v4.1.0
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/shanghai
+    volumes:
+      - ./config:/config
+    ports:
+      - 39283:80
   cron:
     build: 
       context: ./docker
@@ -16,7 +28,5 @@ services:
         crontab /etc/cron.d/crontab
         tail -f /dev/null
     volumes:
-      - .:/workspace/
+      - .:/workspace
       - ./docker/crontab:/etc/cron.d/crontab
-
-  

@@ -2,10 +2,10 @@
 # @Author: longfengpili
 # @Date:   2024-03-19 11:35:27
 # @Last Modified by:   longfengpili
-# @Last Modified time: 2024-03-20 21:26:31
+# @Last Modified time: 2024-03-25 18:44:47
 # @github: https://github.com/longfengpili
 
-
+from pathlib import Path
 from fake_useragent import UserAgent
 
 from products.utils.brequests import BaseAPI
@@ -77,7 +77,12 @@ class BarCode(BaseAPI):
         picurl = f'https://oss.gds.org.cn/{picpath}'
         result = self.request_api(picurl, method='get', restype='content')
         picname = f"{gtin}.jpg"
-        picpath = f"./productpictures/{picname}"
-        with open(picpath, 'wb') as f:
+        picpath = Path("./config/data/storage/productpictures/")
+        pic = picpath.joinpath(picname)
+
+        if not picpath.exists():
+            picpath.mkdir(parents=True, exist_ok=True)
+
+        with pic.open('wb') as f:
             f.write(result)
         return picname
