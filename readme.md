@@ -1,6 +1,8 @@
 
 [中国商品信息网](https://bff.gds.org.cn/gds/searching-api/ProductService/ProductListByGTIN?PageSize=30&PageIndex=1&SearchItem=06972205226407)
 
+https://oss.gds.org.cn/userfile/202266/m698951257.png
+
 keyword：产品关键词或搜索关键词。  
 branch_code：分支或分公司的代码。  
 gtin：全球贸易项目编号（Global Trade Item Number），用于唯一标识产品。  

@@ -2,7 +2,7 @@
 # @Author: longfengpili
 # @Date:   2024-03-19 11:35:27
 # @Last Modified by:   longfengpili
-# @Last Modified time: 2024-03-25 18:44:47
+# @Last Modified time: 2024-05-14 15:15:09
 # @github: https://github.com/longfengpili
 
 from pathlib import Path
@@ -66,6 +66,7 @@ class BarCode(BaseAPI):
             picname = self.download_pic(pinfo)
             pinfo['picname'] = picname
 
+        bclogger.info(pinfo)
         return pinfo
 
     def download_pic(self, pinfo: dict):
