@@ -1,7 +1,10 @@
 
 [中国商品信息网](https://bff.gds.org.cn/gds/searching-api/ProductService/ProductListByGTIN?PageSize=30&PageIndex=1&SearchItem=06972205226407)
 
-https://oss.gds.org.cn/userfile/202266/m698951257.png
+
+https://bff.gds.org.cn/gds/searching-api/ProductService/ProductListByGTIN?PageSize=30&PageIndex=1&SearchItem=06928926003490
+https://oss.gds.org.cn/userfile/wechat/202112011422083625371005737.jpg
+
 
 keyword：产品关键词或搜索关键词。  
 branch_code：分支或分公司的代码。  
