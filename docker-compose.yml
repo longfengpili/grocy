@@ -19,7 +19,7 @@ services:
       dockerfile: Dockerfile
     container_name: cron
     env_file:
-      - path: .env
+      - path: ./.env
         required: true
     restart: always
     privileged: true #root权限
