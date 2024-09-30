@@ -4,7 +4,7 @@ services:
   grocy:
     container_name: grocy
     restart: always
-    image: linuxserver/grocy:version-v4.1.0
+    image: linuxserver/grocy
     environment:
       - PUID=1000
       - PGID=1000
