@@ -2,7 +2,7 @@
 # @Author: longfengpili
 # @Date:   2024-03-20 11:23:28
 # @Last Modified by:   longfengpili
-# @Last Modified time: 2024-05-14 15:13:55
+# @Last Modified time: 2024-09-30 13:35:50
 # @github: https://github.com/longfengpili
 
 import os
@@ -58,6 +58,8 @@ def update_products(products: list):
             name, desc, picname = get_pinfo_by_code(barcode)
             if name:
                 update_grocy(pid, name, desc, picture_file_name=picname)
+        else:
+            mlogger.info(f"{pid}::{desc} not need update ~")
 
 
 if __name__ == '__main__':
