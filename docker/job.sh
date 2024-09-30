@@ -1,7 +1,7 @@
 # @Author: longfengpili
 # @Date:   2024-03-25 13:39:46
 # @Last Modified by:   longfengpili
-# @Last Modified time: 2024-03-26 10:52:31
+# @Last Modified time: 2024-09-30 11:58:22
 
 now=$(date '+%s')
 now_str=$(date '+%Y-%m-%d %H:%M:%S.%3N')
@@ -15,5 +15,5 @@ logInfo() {
 }
 
 logInfo $LINENO "start"
-/usr/bin/python3.8 /workspace/ginfo/main.py
+/usr/bin/python3 /workspace/ginfo/main.py
 logInfo $LINENO "end"
