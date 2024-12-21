@@ -60,7 +60,11 @@ class BarCode(BaseAPI):
             if code == 2:
                 bclogger.error(f"{url}, {msg}")
 
-        pinfo = res['Data']['Items'][0] if 'Data' in res else {}
+        try:
+            pinfo = res['Data']['Items'][0]
+        except Exception as e:
+            bclogger.error(f"[Error]: {e}, Res: {res}")
+            pinfo = {}
 
         if pinfo:
             picname = self.download_pic(pinfo)
